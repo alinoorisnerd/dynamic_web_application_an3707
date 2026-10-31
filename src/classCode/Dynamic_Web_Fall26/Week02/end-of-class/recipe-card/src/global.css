@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --c-blue: #48b2ff;
+  --c-ink: #2d2a32;
+  --c-muted: #6b6570;
+  --c-page: #f4f4f4;
+  --c-card: #ffffff;
+  --ff-acme: 'Acme', sans-serif;
+  --ff-body: 'Open Sans', sans-serif;
+  --radius: 20px;
+  --shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  --space: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-body);
+  color: var(--c-ink);
+  background-color: var(--c-page);
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--space) * 1.5);
+  width: calc(100% - var(--space) * 2);
+  max-width: 960px;
+  margin: calc(var(--space) * 2) auto;
+  padding: calc(var(--space) * 1.5);
+  border-radius: var(--radius);
+  background: var(--c-card);
+  box-shadow: var(--shadow);
+}
+
+.img {
+  width: 35%;
+  object-fit: cover;
+  border-radius: calc(var(--radius) / 2);
+}
+
+.card_text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.card_lists {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--space) * 2);
+}
+
+.recipe_info p {
+  margin-top: 0;
+  color: var(--c-muted);
+  line-height: 1.6;
+}
+
+.recipe_title,
+.list_title {
+  font-family: var(--ff-acme);
+  font-weight: 400;
+}
+
+.recipe_title {
+  margin: 0 0 calc(var(--space) / 2);
+  padding-bottom: calc(var(--space) / 4);
+  font-size: 2.5rem;
+  border-bottom: 0.25rem solid var(--c-blue);
+}
+
+.list_title {
+  margin: calc(var(--space) / 2) 0;
+  font-size: 1.625rem;
+  color: var(--c-blue);
+}
+
+.ingredient_list {
+  flex: 2;
+}
+
+.ingredient_list ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.list_item {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.list_item span {
+  display: block;
+}
+
+.list_item .measure {
+  min-width: 5rem;
+  font-weight: 600;
+  color: var(--c-blue);
+}
+
+.instructions_list {
+  flex: 3;
+}
+
+.instructions_list ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.instructions_list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .img {
+    width: 100%;
+    max-height: 320px;
+  }
+
+  .card_lists {
+    flex-direction: column;
+    gap: 0;
+  }
+}
