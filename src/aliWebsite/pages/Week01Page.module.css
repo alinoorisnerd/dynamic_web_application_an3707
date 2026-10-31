@@ -1,0 +1,15 @@
+:global(body) {
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+.frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
+}

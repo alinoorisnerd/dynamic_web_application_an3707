@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'DM Serif Display', ui-serif, Georgia, serif;
+  --color-wine: #6b1e2e;
+  --color-wine-dark: #521522;
+  --color-cream: #f9f3e8;
+  --color-sand: #efe6d4;
+  --color-line: #cfc3ae;
+  --color-ink: #2b1d1f;
+  --color-muted: #7a6a66;
+  --color-moss: #2f6b3f;
+  --color-rust: #b8321f;
+
+  --animate-rise: rise 0.35s ease-out both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  @apply bg-cream font-sans text-ink antialiased;
+}
